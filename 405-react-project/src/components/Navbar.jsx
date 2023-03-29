@@ -3,11 +3,14 @@ import React from "react";
 function Navbar() {
   return (
     <header>
-      <img
-        class="logo"
-        src="https://www.albaik.com/ar/media/get/20111220_logo-albaik.png"
-        alt="Logo"
-      ></img>
+      <a href="/">
+        <img
+          class="logo"
+          src="https://www.albaik.com/ar/media/get/20111220_logo-albaik.png"
+          alt="Logo"
+        ></img>
+      </a>
+
       <nav class="navbar">
         <ul>
           <li>
@@ -25,7 +28,7 @@ function Navbar() {
         </ul>
       </nav>
       <a class="btn" href="#">
-        Sign in
+        Order Now
       </a>
     </header>
   );
