@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", "Helvetica";
+}
+
+body {
+  background-color: #ddd;
+}
+
+header{
+  border-bottom: 1px solid #adadad;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  background-color: #E65F55;
+  /* background: linear-gradient(90deg, rgba(230,95,85,1) 30%, rgba(255,59,0,1) 70%); */
+  padding: 2rem 0 2rem 0;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar {
+  width: 40%;
+}
+
+.logo{
+  padding-left: 5rem;
+  width: 28rem;
+  cursor: pointer;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  margin-right: 5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ddd;
+}
+
+nav ul li a:hover {
+  transition: all 0.3s ease 0s;
+  font-size: 1.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #F3D745;
+}
+
+.btn {
+  /*  Red #E65F55 */
+  /* Yellow #F3D745 */
+  transition: all 0.5s ease 0s;
+  background-color: rgb(243, 215, 69, 1);
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  margin-right: 3rem;
+  font-size: 1.6rem;
+  color: #000;
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn:hover {
+  transition: all 0.5s ease 0s;
+  background-color: #E65F55;
+  /* background-color: rgb(243, 215, 69, 0.6); */
+  color: #ddd;
+  border: 1px solid #F3D745;
+}
+
+.showcase-food{
+  width: 500px;
+}
