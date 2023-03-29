@@ -119,7 +119,6 @@ nav ul li a:hover {
 .footer{
   position: absolute;
   color: white;
-  bottom: 0;
   width: 100%;
   height: 2.5rem; 
   background-color: rgb(146, 30, 22);
