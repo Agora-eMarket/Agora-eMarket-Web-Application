@@ -2,16 +2,15 @@ import React from "react";
 
 function Navbar() {
   return (
-    <header>
+    <div className="navbar">
       <a href="/">
         <img
-          class="logo"
+          className="logo"
           src="https://www.albaik.com/ar/media/get/20111220_logo-albaik.png"
           alt="Logo"
         ></img>
       </a>
-
-      <nav class="navbar">
+      <nav>
         <ul>
           <li>
             <a href="#">Home</a>
@@ -27,10 +26,10 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-      <a class="btn" href="#">
+      <a className="btn" href="#">
         Order Now
       </a>
-    </header>
+    </div>
   );
 }
 
