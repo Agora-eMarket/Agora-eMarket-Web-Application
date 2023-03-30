@@ -3,9 +3,9 @@ import React from "react";
 function Navbar() {
   return (
     <div className="navbar">
-      <a href="/">
+      <a className="logo" href="/">
         <img
-          className="logo"
+          className="logo-img"
           src="https://www.albaik.com/ar/media/get/20111220_logo-albaik.png"
           alt="Logo"
         ></img>

@@ -71,16 +71,20 @@ body {
   display: flex;
   justify-content:space-between;
   align-items:center;
-  background-color: #e65f5500;
+  /* background-color: #e65f5500; */
+  background-color: rgb(146, 30, 22);
   /* background: linear-gradient(90deg, rgba(230,95,85,1) 30%, rgba(255,59,0,1) 70%); */
   padding: 2rem 0 2rem 0;
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .logo{
-  padding-left: 5rem;
-  width: 28rem;
+  margin-left: 5rem;
   cursor: pointer;
+}
+
+.logo-img {
+  width: 24rem;
 }
 
 div nav ul {
