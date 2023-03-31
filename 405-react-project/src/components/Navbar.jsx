@@ -13,10 +13,10 @@ function Navbar() {
       <nav>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Menu</a>
+            <a href="/Menu">Menu</a>
           </li>
           <li>
             <a href="#">About us</a>

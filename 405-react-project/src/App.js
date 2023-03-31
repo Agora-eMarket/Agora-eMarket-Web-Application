@@ -1,14 +1,17 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./index.css";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Home from "./components/Home.jsx";
+import Menu from "./components/Menu.jsx";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      {/* <Route path="/Login" element={<Login />} /> */}
+      <Route path="/Menu" element={<Menu />} />
+      {/* <Route path="/Register" element={<Register />} /> */}
+    </Routes>
   );
 }
 
