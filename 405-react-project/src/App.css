@@ -211,25 +211,25 @@ div nav ul li a:hover {
   overflow-x: auto;
 }
 .food-type{
-  margin-top: 30px;
-  margin-left: 30px;
-  background-color: #adadad;
-  display: flex;
+  margin: 20px;
+
+  background-color: rgb(227, 230, 15);
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
   border-radius: 9px;
   border: 1px solid #ddd;
-}
-.food-type{
-  position: relative;
-  display: block;
-  margin-left: 20px;
-  margin-right: 20px;
   padding-left: 20px;
   padding-top: 20px;
+  position: relative;
+  display: block;
+  box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
 }
+
 .divider {
   border-bottom: solid 1px #000;
   margin: 20px 0;
+}
+.type{
+  color: rgb(146, 24, 24);
 }
