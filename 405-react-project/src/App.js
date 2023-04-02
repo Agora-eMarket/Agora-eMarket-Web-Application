@@ -3,7 +3,7 @@ import "./App.css";
 import "./index.css";
 import Home from "./components/Home.jsx";
 import Menu from "./components/Menu.jsx";
-
+const t = 5 > 4 ? "/Menu" : "/Login";
 function App() {
   return (
     <Routes>
