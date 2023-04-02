@@ -3,14 +3,16 @@ import "./App.css";
 import "./index.css";
 import Home from "./components/Home.jsx";
 import Menu from "./components/Menu.jsx";
-const t = 5 > 4 ? "/Menu" : "/Login";
+import Register from "./components/SignUp.jsx";
+import Login from "./components/SignIn.jsx";
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/Login" element={<Login />} /> */}
+      <Route path="/Login" element={<Login />} />
       <Route path="/Menu" element={<Menu />} />
-      {/* <Route path="/Register" element={<Register />} /> */}
+      <Route path="/Register" element={<Register />} />
     </Routes>
   );
 }
