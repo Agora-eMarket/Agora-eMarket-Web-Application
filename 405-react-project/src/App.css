@@ -10,20 +10,35 @@ html {
   font-size: 62.5%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
 body {
-  background-color: #ddd;
-  font-family: 'Ubuntu';
-  /* font-family: "monospace", "Helvetica"; */
+  background-color: #fff;
+  font-family: "Ubuntu", "Helvetica";
+  width: 100%;
+  /* height: 0vh; */
+  text-align: center;
+}
+
+#wrapper {
+  display: grid;
+  min-height: 100%;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+      "head"
+      "nav"
+      "foot";
+}
+
+header {
+  grid-area: head;
+}
+
+nav {
+  grid-area: nav;
+}
+
+footer {
+  grid-area: footer;
 }
 
 .hero * {
@@ -45,7 +60,7 @@ body {
   /* margin: 20px 0 30px; */
 }
 
-.hero .content h2 {
+.hero .content p {
   font-size: 3rem;
   margin: 20px 30px 30px 0;
 
@@ -57,22 +72,27 @@ body {
   justify-content:space-between;
   align-items:center;
   /* background-color: #e65f5500; */
-  background-color: rgb(146, 30, 22);
+  background-color: rgb(255, 255, 255);
   padding: 2rem 0 2rem 0;
-  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .logo{
   margin-left: 5rem;
   cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8em;
+  
+}
+
+.logo-text {
+  font-size: 3rem;
 }
 
 .logo-img {
-  width: 24rem;
-}
-
-div nav ul {
-  margin-right: 10rem;
+  width: 5rem;
+  margin-right: 2rem;
 }
 
 div nav ul li{
@@ -85,34 +105,34 @@ div nav ul li a {
   margin-right: 5rem;
   font-size: 1.6rem;
   font-weight: bold;
-  color: #ddd;
+  color: #333;
 }
 
 div nav ul li a:hover {
   transition: all 0.3s ease 0s;
   font-size: 1.8rem;
   padding-bottom: 0.5rem;
-  border-bottom: 3px solid #F3D745;
+  border-bottom: 3px solid #0065f3;
 }
 
 .btn {
   /*  Red #E65F55 */
   /* Yellow #F3D745 */
   transition: all 0.5s ease 0s;
-  background-color: rgb(243, 215, 69, 1);
+  background-color: #0065f3;
   /* background: linear-gradient(45deg, rgba(243,215,69,1) 30%, rgba(255,160,0,1) 70%); */
   padding: 0.8rem;
   border-radius: 0.5rem;
   text-decoration: none;
   margin-right: 3rem;
   font-size: 1.6rem;
-  color: #000;
+  color: #ddd;
   /* box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .btn:hover {
   transition: all 0.5s ease 0s;
-  background-color: rgba(255,160,0,1);
+  background-color: rgb(0, 90, 255);
   padding: 1rem;
   font-size: 1.8rem;
   /* background: linear-gradient(45deg, rgba(230, 95, 85,1) 30%, rgba(255,59,0,1) 70%); */
@@ -121,7 +141,7 @@ div nav ul li a:hover {
 }
 
 .hero {
-  background: url('https://pbs.twimg.com/media/FsFdmLyWIAAK1gv?format=jpg&name=large') no-repeat center center/cover;
+  background: url('https://images.pexels.com/photos/2733918/pexels-photo-2733918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
   height: 100vh;
   position: relative;
   color: #fff;
@@ -134,18 +154,20 @@ div nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .footer{
   /* position: absolute; */
-  color: #ddd;
-  width: 100%;
-  height: 2.5rem;
-  background-color: rgb(146, 30, 22);
+  color: #333;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-top: 0.5rem;
+  font-weight: bold;
+ }
+
+ .footer p {
+  margin-bottom: 2rem;
  }
  section {
   padding: 20px;

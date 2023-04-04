@@ -1,14 +1,19 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCartShopping } from "@fortawesome/free-regular-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 //is this working
 function Navbar() {
   return (
     <div className="navbar">
       <a className="logo" href="/">
-        <img
+        <FontAwesomeIcon
+          icon={faCartShopping}
+          size="2xl"
+          style={{ color: "#005aff" }}
           className="logo-img"
-          src="https://www.albaik.com/ar/media/get/20111220_logo-albaik.png"
-          alt="Logo"
-        ></img>
+        />
+        <span className="logo-text">Agorá</span>
       </a>
       <nav>
         <ul>

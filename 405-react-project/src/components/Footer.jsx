@@ -5,9 +5,8 @@ function Footer() {
     <footer className="footer">
       <small>
         <p>
-          &copy;2023 Copyright ELBAIK Food Systems Company S.A. ® All rights
-          reserved ALBAIK®, logos and Nazeeh & Wartan are registered trademarks
-          of the ELBAIK Food Systems Company S.A.
+          &copy;2023 Copyright Agorá Food Systems Company S.A. ® All rights
+          reserved Agorá.
         </p>
       </small>
     </footer>

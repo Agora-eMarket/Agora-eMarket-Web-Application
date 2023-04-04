@@ -3,18 +3,20 @@ import Navbar from "./Navbar.jsx";
 
 function Header() {
   return (
-    <header>
-      <Navbar />
-      <div className="hero">
-        <div className="content">
-          <h1>ALBAIK is your Neighbor</h1>
-          <h2>Made in Saudi</h2>
-          <a className="btn" href="#">
-            Order Now
-          </a>
+    <div id="wrapper">
+      <header>
+        <Navbar />
+        <div className="hero">
+          <div className="content">
+            <h1>Agorá is your Neighbor</h1>
+            <p>One stop shop for all your daily needs</p>
+            <a className="btn" href="#">
+              Order Now
+            </a>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }
 

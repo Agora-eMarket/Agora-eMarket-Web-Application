@@ -1,33 +1,52 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
+
     background-color: rgb(255, 255, 255);
     height: 100vh;
-    font-family: 'Inter', sans-serif;
+}
+
+.registerLink {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.form-title {
+    color: #0065f3;
+}
+
+.form h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-container {
     height: 100vh;
-    padding: 20px;
+    /* padding: 1px; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
 
 .form {
-    background-color: rgb(227, 230, 15);
-    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: space-between;
     box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
-    min-width: 700px;
+    width: 30%;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
 }
 
 .form--input {
@@ -37,18 +56,32 @@ body {
     height: 40px;
     border-radius: 5px;
     border: 1px solid gray;
-    padding: 5px;
-    font-family: 'Inter', sans-serif;
+    padding: 15px;
+}
+
+.form--input:hover {
+    outline: none;
+    border-color: #ff9832;
+}
+
+.form--input:focus {
+    outline: none;
+    border-color: #ff9832;
+    box-shadow: 0px 0px 4px 4px rgba(255,152,50,0.4);
 }
 
 .form--submit {
-    width: 50%;
-    padding: 10px;
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1.8rem;
     border-radius: 5px;
     color: white;
-    background-color: rgb(146, 24, 24);
+    background-color: #0065f3;
     border: none;   
     cursor: pointer; 
+}
+.form--submit:hover {
+    background-color: rgb(0, 90, 255);
 }
 
 .form--marketing {
@@ -61,8 +94,9 @@ body {
     margin-right: 10px;
 }
 .form--label{
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bold;
-    float: left;
-    color: brown;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+    color: #0065f3;
 }
