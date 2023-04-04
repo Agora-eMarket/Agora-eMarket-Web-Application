@@ -45,7 +45,7 @@ export default function SignUp() {
                     onChange={handleChange}
                     value={formData.fname}
                 />
-                <label htmlFor="fname" className="form--label">Last Name</label>
+                <label htmlFor="lname" className="form--label">Last Name</label>
                 <input
                     type="text"
                     placeholder="Last Name"
@@ -54,7 +54,7 @@ export default function SignUp() {
                     onChange={handleChange}
                     value={formData.lname}
                 />
-                <label htmlFor="fname" className="form--label">Email</label>
+                <label htmlFor="email" className="form--label">Email</label>
                 <input
                     type="email"
                     placeholder="Email address"
@@ -63,7 +63,7 @@ export default function SignUp() {
                     onChange={handleChange}
                     value={formData.email}
                 />
-                <label htmlFor="fname" className="form--label">Password</label>
+                <label htmlFor="password" className="form--label">Password</label>
                 <input
                     type="password"
                     placeholder="Password"
@@ -72,7 +72,7 @@ export default function SignUp() {
                     onChange={handleChange}
                     value={formData.password}
                 />
-                <label htmlFor="fname" className="form--label">Confirm Password</label>
+                <label htmlFor="passwordConfirm" className="form--label">Confirm Password</label>
                 <input
                     type="password"
                     placeholder="Confirm password"
@@ -81,7 +81,7 @@ export default function SignUp() {
                     onChange={handleChange}
                     value={formData.passwordConfirm}
                 />
-                <label htmlFor="fname" className="form--label">Phone</label>
+                <label htmlFor="phone" className="form--label">Phone</label>
                 <input
                     type="text"
                     placeholder="phone"

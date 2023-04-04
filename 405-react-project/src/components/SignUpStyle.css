@@ -20,7 +20,7 @@ body {
 }
 
 .form {
-    background-color: rgb(227, 230, 15);
+    background-color: rgb(11, 156, 228);
     padding: 50px;
     border-radius: 10px;
     display: flex;
@@ -45,10 +45,12 @@ body {
     width: 50%;
     padding: 10px;
     border-radius: 5px;
-    color: white;
-    background-color: rgb(146, 24, 24);
+    color: rgb(2, 2, 2);
+    background-color: rgb(255, 254, 254);
     border: none;   
     cursor: pointer; 
+    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
+
 }
 
 .form--marketing {
@@ -64,5 +66,15 @@ body {
     font-size: 18px;
     font-weight: bold;
     float: left;
-    color: brown;
+    color: rgb(255, 255, 255);
+    text-decoration: solid;
+    font-size: 16pt;
+}
+.form--link{
+    font-size: 12pt;
+    text-decoration: underline;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
