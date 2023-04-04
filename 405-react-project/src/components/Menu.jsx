@@ -3,7 +3,7 @@ import Navbar from "./Navbar.jsx";
 import data from "./chickenData";
 import Contact from "./Contact";
 import fishData from "./seafoodData.jsx";
-
+import SignIn from "./SignIn";
 function Menu() {
   const dataElement = data.map(data => {
     return <Contact
