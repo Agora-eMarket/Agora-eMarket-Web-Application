@@ -74,7 +74,7 @@ footer {
   /* background-color: #e65f5500; */
   background-color: rgb(255, 255, 255);
   padding: 2rem 0 2rem 0;
-  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19)
 }
 
 .logo{
@@ -189,14 +189,16 @@ div nav ul li a:hover {
   padding: 13px;
   padding-bottom: 20px;
   background-color: white;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.19)
 }
 
 .contact-card > img {
   width: 100%;
   height: auto;
   align-self: center;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   object-fit: cover;
+  border-bottom: 2px solid #333;
 }
 
 .contact-card > h3 {
@@ -228,14 +230,14 @@ div nav ul li a:hover {
 .card-list {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 60px;
   overflow-x: auto;
 }
 .food-type{
   margin: 20px;
 
-  background-color: rgb(227, 230, 15);
-  flex-wrap: nowrap;
+  background-color: rgb(255, 255, 255);
+  /* flex-wrap: nowrap; */
   gap: 20px;
   overflow-x: auto;
   border-radius: 9px;
@@ -244,13 +246,13 @@ div nav ul li a:hover {
   padding-top: 20px;
   position: relative;
   display: block;
-  box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19)
 }
 
 .divider {
-  border-bottom: solid 1px #000;
+  border-bottom: solid 1px #333;
   margin: 20px 0;
 }
 .type{
-  color: rgb(146, 24, 24);
+  color: #0065f3;
 }
