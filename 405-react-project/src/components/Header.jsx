@@ -10,7 +10,7 @@ function Header() {
           <div className="content">
             <h1>Agorá is your Neighbor</h1>
             <p>One stop shop for all your daily needs</p>
-            <a className="btn" href="#">
+            <a className="btn" href="/menu">
               Order Now
             </a>
           </div>

@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./index.css";
+
 import Home from "./components/Home.jsx";
 import Menu from "./components/Menu.jsx";
 import Register from "./components/SignUp.jsx";

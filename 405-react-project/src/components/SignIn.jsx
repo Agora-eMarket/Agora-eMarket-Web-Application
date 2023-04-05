@@ -2,8 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignUpStyle.css";
 
-export default function SignUp() {
+export default function SignIn() {
   const navigate = useNavigate();
+
+  // initialize isLoggedIn state with localStorage values or default values
+  const [isLoggedIn, setIsLoggedIn] = React.useState({
+    state: localStorage.getItem("isLoggedIn") === "true" || false,
+    email: localStorage.getItem("email") || "",
+  });
+
   const [formData, setFormData] = React.useState({
     email: "",
     password: "",
@@ -16,7 +23,8 @@ export default function SignUp() {
       [name]: type === "checkbox" ? checked : value,
     }));
   }
-  function handleSubmit(event) {
+
+  async function handleSubmit(event) {
     event.preventDefault();
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -32,57 +40,91 @@ export default function SignUp() {
       body: raw,
       redirect: "follow",
     };
-    fetch("http://localhost/login.php", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result.success);
-        if (result.success) {
-          console.log(result);
-          navigate("/menu");
-        } else {
-          alert(result.message);
-        }
-      })
-      .catch((error) => console.log("error", error));
+    try {
+      const response = await fetch(
+        "http://localhost/login.php",
+        requestOptions
+      );
+      const result = await response.json();
+
+      if (result.success) {
+        const userData = {
+          isLoggedIn: result.success,
+          email: formData.email,
+        };
+        setIsLoggedIn(userData);
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("email", formData.email);
+        navigate("/menu");
+      } else {
+        alert(result.message);
+      }
+    } catch (e) {
+      alert(e);
+    }
+  }
+
+  function handleLogout() {
+    setIsLoggedIn({
+      state: false,
+      email: "",
+    });
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("email");
   }
 
   return (
     <div className="form-container">
-      <form className="form" onSubmit={handleSubmit}>
-        <h1>
-          <a href="/">
-            <span className="form-title">Sign</span> in
+      {isLoggedIn.state ? (
+        <div>
+          <p id="loggedInMessage">
+            You are logged in as{" "}
+            <span id="loggedInEmail">{isLoggedIn.email}</span>
+          </p>
+          <a className="loggedBtn" href="/">
+            Home
           </a>
-        </h1>
-        <label htmlFor="fname" className="form--label">
-          Email
-        </label>
-        <input
-          type="email"
-          placeholder="Email address"
-          className="form--input"
-          name="email"
-          onChange={handleChange}
-          value={formData.email}
-          required
-        />
-        <label htmlFor="fname" className="form--label">
-          Password
-        </label>
-        <input
-          type="password"
-          placeholder="Password"
-          className="form--input"
-          name="password"
-          onChange={handleChange}
-          value={formData.password}
-          required
-        />
-        <button className="form--submit">Sign in</button>
-        <a className="registerLink" href="/register">
-          Don't have an account?
-        </a>
-      </form>
+          <a className="loggedBtn" href="/" onClick={handleLogout}>
+            Log out
+          </a>
+        </div>
+      ) : (
+        <form className="form" onSubmit={handleSubmit}>
+          <h1>
+            <a href="/">
+              <span className="form-title">Sign</span> in
+            </a>
+          </h1>
+          <label htmlFor="fname" className="form--label">
+            Email
+          </label>
+          <input
+            type="email"
+            placeholder="Email address"
+            className="form--input"
+            name="email"
+            onChange={handleChange}
+            value={formData.email}
+            required
+          />
+          <label htmlFor="fname" className="form--label">
+            Password
+          </label>
+          <input
+            type="password"
+            placeholder="Password"
+            className="form--input"
+            name="password"
+            onChange={handleChange}
+            value={formData.password}
+            required
+          />
+          <button className="form--submit">Sign in</button>
+          <a className="registerLink" href="/register">
+            Don't have an account?
+          </a>
+        </form>
+      )}
     </div>
   );
 }

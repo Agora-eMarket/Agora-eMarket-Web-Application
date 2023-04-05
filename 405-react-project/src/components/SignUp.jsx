@@ -21,7 +21,7 @@ export default function SignUp() {
       [name]: type === "checkbox" ? checked : value,
     }));
   }
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     if (formData.password === formData.passwordConfirm) {
       var myHeaders = new Headers();
@@ -41,21 +41,20 @@ export default function SignUp() {
         body: raw,
         redirect: "follow",
       };
-      fetch("http://localhost/register.php", requestOptions)
-        .then((response) => response.json())
-        .then((result) => {
-          console.log(result.success);
+      const response = await fetch(
+        "http://localhost/register.php",
+        requestOptions
+      );
+      const result = await response.json();
 
-          if (result.success) {
-            console.log(result);
-            navigate("/login");
-          } else {
-            alert("Account Already Exists");
-          }
-        })
-        .catch((error) => console.log("error", error));
+      if (result.success) {
+        navigate("/login");
+      } else {
+        alert("Account Already Exists");
+      }
     } else {
       console.log("Passwords do not match");
+      alert("Passwords do not match");
       return;
     }
 

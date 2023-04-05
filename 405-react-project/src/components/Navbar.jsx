@@ -1,9 +1,25 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCartShopping } from "@fortawesome/free-regular-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 //is this working
 function Navbar() {
+  const navigate = useNavigate();
+
+  const [isLoggedIn, setIsLoggedIn] = React.useState({
+    state: localStorage.getItem("isLoggedIn") === "true" || false,
+  });
+
+  function handleLogout() {
+    setIsLoggedIn({
+      state: false,
+    });
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("email");
+    navigate("/");
+  }
+
   return (
     <div className="navbar">
       <a className="logo" href="/">
@@ -31,9 +47,15 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-      <a className="btn" href="#">
-        Order Now
-      </a>
+      {isLoggedIn.state ? (
+        <a className="btn" href="/" onClick={handleLogout}>
+          Sign out
+        </a>
+      ) : (
+        <a className="btn" href="/login">
+          Sign in
+        </a>
+      )}
     </div>
   );
 }
