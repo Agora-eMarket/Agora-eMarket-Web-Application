@@ -229,7 +229,7 @@ div nav ul li a:hover {
 }
 .card-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 60px;
   overflow-x: auto;
 }
@@ -250,8 +250,8 @@ div nav ul li a:hover {
 }
 
 .divider {
-  border-bottom: solid 1px #333;
-  margin: 20px 0;
+  /* border-bottom: solid 1px #333; */
+  margin: 30px 0;
 }
 .type{
   color: #0065f3;
