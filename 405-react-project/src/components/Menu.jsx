@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar.jsx";
+import Footer from "./Footer.jsx";
 import data from "./chickenData";
 import Contact from "./Contact";
 import fishData from "./seafoodData.jsx";
-import SignIn from "./SignIn";
 function Menu() {
   const dataElement = data.map((data) => {
     return <Contact key={data.id} props={data} />;
@@ -23,6 +23,7 @@ function Menu() {
         <h1 className="type">SeaFood</h1>
         <section className="card-list">{fishElement}</section>
       </div>
+      <Footer />
     </>
   );
 }
