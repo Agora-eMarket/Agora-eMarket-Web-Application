@@ -200,7 +200,9 @@ div nav ul li a:hover {
   object-fit: cover;
   border-bottom: 2px solid #333;
 }
-
+.contact-card-btn{
+  width: 50px;
+}
 .contact-card > h3 {
   font-weight: 700;
   font-size: 18px;
