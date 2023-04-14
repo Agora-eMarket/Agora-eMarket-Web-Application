@@ -11,7 +11,7 @@ export default function Contact({props}){
             </div>
             <div className="info-group">
                 <img src= {cat3}/>
-                <p>{props.price} SR</p>
+                <p>{props.price} SAR</p>
             </div>
             {/* <h1 style={{display: props.num ? 'block' : 'none'}}>{1 + props.num}</h1> */}
         </div>
