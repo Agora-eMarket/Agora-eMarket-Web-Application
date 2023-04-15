@@ -9,18 +9,20 @@ function Menu() {
     return <Contact key={data.id} props={data} />;
   });
   const FruitsVegetables = FruitsVegetablesData.map((FruitsVegetablesData) => {
-    return <Contact key={FruitsVegetablesData.id} props={FruitsVegetablesData} />;
+    return (
+      <Contact key={FruitsVegetablesData.id} props={FruitsVegetablesData} />
+    );
   });
   return (
     <>
       <Navbar />
       <div className="food-type">
-        <h1 className="type">Dairy&Eggs</h1>
+        <h1 className="type">Dairy & Eggs</h1>
         <section className="card-list">{dataElement}</section>
       </div>
       <div className="divider "></div>
       <div className="food-type">
-        <h1 className="type">Fruits&Vegetables</h1>
+        <h1 className="type">Fruits & Vegetables</h1>
         <section className="card-list">{FruitsVegetables}</section>
       </div>
       <Footer />

@@ -6,6 +6,7 @@ import Home from "./components/Home.jsx";
 import Menu from "./components/Menu.jsx";
 import Register from "./components/SignUp.jsx";
 import Login from "./components/SignIn.jsx";
+import Payment from "./components/Payment.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Menu" element={<Menu />} />
+      <Route path="/Payment" element={<Payment />} />
       <Route path="/Register" element={<Register />} />
     </Routes>
   );

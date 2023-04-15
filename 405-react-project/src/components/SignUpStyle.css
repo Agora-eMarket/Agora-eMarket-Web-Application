@@ -30,7 +30,7 @@ body {
 
 .form h1 {
     font-size: 3rem;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
 }
 
 .form-container {
@@ -66,6 +66,62 @@ a {
     border-radius: 5px;
     border: 1px solid gray;
     padding: 15px;
+}
+
+.payment--info {
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+.payment--info:hover {
+    outline: none;
+    border-color: #ff9832;
+}
+
+.payment--info:focus {
+    outline: none;
+    border-color: #ff9832;
+    box-shadow: 0px 0px 4px 4px rgba(255,152,50,0.4);
+}
+
+.payment--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-label-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cvvLabel {
+    margin-left: 1rem;
+}
+
+#expireLabel {
+    margin-right: 8rem;
+}
+
+#cvv {
+    width: 20%;
+    margin-right: 5rem;
+}
+#expire-month {
+    width: 20%;
+    margin-left: 10rem;
+    /* border-radius: 5px 0px 0px 5px; */
+    /* border-right: 0.5px solid #aaa; */
+}
+#expire-year {
+    width: 20%;
+    margin-left: 0rem;
+    /* border-radius: 0px 5px 5px 0px; */
+    /* border-left: 0.5px solid #aaa; */
 }
 
 .form--input:hover {
@@ -120,4 +176,27 @@ a {
   font-size: 2rem;
   color: #ddd;
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2)
+}
+
+p {
+    font-size: 1.3rem;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+#paymentOptions {
+    width: 50%;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#paymentOptions:hover {
+    outline: none;
+    border-color: #ff9832;
+}
+
+#paymentOptions:focus {
+    outline: none;
+    border-color: #ff9832;
+    box-shadow: 0px 0px 4px 4px rgba(255,152,50,0.4);   
 }

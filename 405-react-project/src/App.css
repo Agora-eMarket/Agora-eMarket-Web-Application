@@ -202,7 +202,52 @@ div nav ul li a:hover {
 }
 .contact-card-btn{
   width: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
 }
+
+.contact-card-btn:hover{
+
+  background-color: #eee;
+  padding: 0px;
+}
+
+.add-btn {
+  transition: all 0.5s ease 0s;
+  background-color: #0065f3;
+  margin-top: 0.5rem;
+  width: 60%;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  /* margin-right: 3rem; */
+  cursor: pointer;
+  border: none;
+  font-size: 1.3rem;
+  color: #ddd;
+}
+
+.add-btn:hover {
+  /* margin-top: 1.5rem; */
+  transition: all 0.5s ease 0s;
+  background-color: rgb(0, 90, 255);
+  /* padding: 1rem; */
+  font-size: 1.5rem;
+  /* background: linear-gradient(45deg, rgba(230, 95, 85,1) 30%, rgba(255,59,0,1) 70%); */
+  /* color: #ddd;
+ */
+}
+
+.quantity {
+  width: 30%;
+  height: 60%;
+  margin: 0.5rem 0 0 1rem;
+  outline: none;
+  text-align: center;
+}
+
 .contact-card > h3 {
   font-weight: 700;
   font-size: 18px;
@@ -257,4 +302,10 @@ div nav ul li a:hover {
 }
 .type{
   color: #0065f3;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
