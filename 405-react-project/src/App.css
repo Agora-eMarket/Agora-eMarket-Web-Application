@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,9 +25,9 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:
-      "head"
-      "nav"
-      "foot";
+    "head"
+    "nav"
+    "foot";
 }
 
 header {
@@ -63,27 +64,25 @@ footer {
 .hero .content p {
   font-size: 3rem;
   margin: 20px 30px 30px 0;
-
 }
 
 .navbar {
   width: 100%;
   display: flex;
-  justify-content:space-between;
-  align-items:center;
+  justify-content: space-between;
+  align-items: center;
   /* background-color: #e65f5500; */
   background-color: rgb(255, 255, 255);
   padding: 2rem 0 2rem 0;
-  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19)
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19);
 }
 
-.logo{
+.logo {
   margin-left: 5rem;
   cursor: pointer;
   text-decoration: none;
   color: #333;
   font-size: 1.8em;
-  
 }
 
 .logo-text {
@@ -94,8 +93,29 @@ footer {
   width: 5rem;
   margin-right: 2rem;
 }
+.logo-img-1 {
+  color: #087500;
+  font-size: 6rem;
+  margin: 4rem 0 2rem 0;
+}
 
-div nav ul li{
+.logo-img-2 {
+  color: #b0aa00;
+  font-size: 6rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.logo-img-3 {
+  color: #00ffaa;
+  font-size: 6rem;
+  margin: 4rem 0 2rem 0;
+}
+
+hr {
+  width: 100%;
+}
+
+div nav ul li {
   display: inline-block;
 }
 
@@ -113,6 +133,18 @@ div nav ul li a:hover {
   font-size: 1.8rem;
   padding-bottom: 0.5rem;
   border-bottom: 3px solid #0065f3;
+}
+
+.container {
+  background-color: #eee;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  /* box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19) */
+  /* border-radius: 32% 68% 54% 46% / 52% 60% 40% 48%; */
 }
 
 .btn {
@@ -141,14 +173,15 @@ div nav ul li a:hover {
 }
 
 .hero {
-  background: url('https://images.pexels.com/photos/2733918/pexels-photo-2733918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/2733918/pexels-photo-2733918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
   height: 100vh;
   position: relative;
   color: #fff;
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -157,19 +190,18 @@ div nav ul li a:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.footer{
+.footer {
   /* position: absolute; */
   color: #333;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.19)
- }
+}
 
- .footer p {
+.footer p {
   padding: 1rem;
- }
- section {
+}
+section {
   padding: 20px;
 }
 
@@ -189,7 +221,7 @@ div nav ul li a:hover {
   padding: 13px;
   padding-bottom: 20px;
   background-color: white;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.19)
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.19);
 }
 
 .contact-card > img {
@@ -200,7 +232,7 @@ div nav ul li a:hover {
   object-fit: cover;
   border-bottom: 2px solid #333;
 }
-.contact-card-btn{
+.contact-card-btn {
   width: 50px;
   background-color: transparent;
   border: none;
@@ -208,8 +240,7 @@ div nav ul li a:hover {
   padding: 0px;
 }
 
-.contact-card-btn:hover{
-
+.contact-card-btn:hover {
   background-color: #eee;
   padding: 0px;
 }
@@ -266,12 +297,12 @@ div nav ul li a:hover {
 .info-group > p {
   margin-block: 3px;
   font-size: 12px;
-  color: #2B283A;
+  color: #2b283a;
 }
-.contact-card:hover{
+.contact-card:hover {
   cursor: pointer;
 }
-#inf{
+#inf {
   padding-left: 15px;
 }
 .card-list {
@@ -280,7 +311,7 @@ div nav ul li a:hover {
   gap: 60px;
   overflow-x: auto;
 }
-.food-type{
+.food-type {
   margin: 20px;
 
   background-color: rgb(255, 255, 255);
@@ -293,14 +324,14 @@ div nav ul li a:hover {
   padding-top: 20px;
   position: relative;
   display: block;
-  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19)
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19);
 }
 
 .divider {
   /* border-bottom: solid 1px #333; */
   margin: 30px 0;
 }
-.type{
+.type {
   color: #0065f3;
 }
 
@@ -308,4 +339,130 @@ div nav ul li a:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.contactUs--form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.19); */
+}
+
+.blue--wrapper {
+  background-color: #0065f3;
+}
+
+.contact--label {
+  font-size: 1.8rem;
+  color: #ddd;
+  align-self: flex-start;
+  margin: 2rem 0rem 0.8rem 1rem;
+}
+
+.contact--input {
+  width: 100%;
+  border-radius: 3rem;
+  border: 1px solid #ddd;
+  padding: 1rem 1rem 1rem 2rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contact--input:hover {
+  outline: none;
+  border-color: #ff9832;
+}
+
+.contact--input:focus {
+  outline: none;
+  /* background-color: #eee; */
+  border-color: #ff9832;
+  box-shadow: 0px 0px 10px 10px rgba(255, 152, 50, 0.5);
+}
+
+.head {
+  font-size: 3.5rem;
+  margin-top: 3rem;
+  color: #fff;
+}
+
+.head-inverse {
+  font-size: 3.5rem;
+  margin-top: 3rem;
+  color: #333;
+}
+
+.contactUs-p {
+  font-size: 1.8rem;
+  color: #ddd;
+}
+
+.contact-message {
+  margin-top: 3.5rem;
+}
+
+.contactUs-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.contactUs-btn:active {
+  background-color: #ccc;
+}
+
+textarea {
+  resize: none;
+}
+
+.aboutUs-p {
+  margin: 4rem 3.5rem 3rem 3.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: left;
+}
+
+.black {
+  color: #333;
+}
+
+.features-container {
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+  width: 100%;
+  height: 40%;
+    /* background-color: #fff; */
+  /* margin-top: 5rem; */
+}
+
+.features {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width: 30%;
+  height: 90%;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19);
+    /* background-color: #ddd; */
+  border-radius: 1.5rem;
+}
+
+.features-p {
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+  color: #ddd;
+  font-weight: bold;
+}
+
+.required {
+  color: rgb(205, 40, 40);
 }

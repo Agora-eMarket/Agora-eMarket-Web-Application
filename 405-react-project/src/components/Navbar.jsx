@@ -40,10 +40,10 @@ function Navbar() {
             <a href="/Menu">Menu</a>
           </li>
           <li>
-            <a href="#">About us</a>
+            <a href="/#about-us">About us</a>
           </li>
           <li>
-            <a href="#">Contact us</a>
+            <a href="/#contact-us">Contact us</a>
           </li>
         </ul>
       </nav>
