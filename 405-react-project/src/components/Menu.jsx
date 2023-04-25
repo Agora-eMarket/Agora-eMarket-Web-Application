@@ -36,7 +36,6 @@ function Menu() {
   const dairyEggs = dairyEggsData.map((item) => {
     return <Contact key={item.id} props={item} />;
   });
-
   const fruitsVegetables = fruitsVegetablesData.map((item) => {
     return <Contact key={item.id} props={item} />;
   });
