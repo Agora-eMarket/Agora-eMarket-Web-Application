@@ -1,21 +1,22 @@
 import React from "react";
-import cat3 from "./dollar-sign.png";
+import dollarSign from "./dollar-sign.png";
 export default function Contact({ props }) {
-  const [counter, setCounter] = React.useState(0);
+  alert("Contact card");
+  // const [counter, setCounter] = React.useState(0);
 
-  //increase counter
-  const increase = () => {
-    setCounter((count) => count + 1);
-  };
-  //decrease counter
-  const decrease = () => {
-    if (counter > 0) {
-      setCounter((count) => count - 1);
-    }
-  };
+  // //increase counter
+  // const increase = () => {
+  //   setCounter((count) => count + 1);
+  // };
+  // //decrease counter
+  // const decrease = () => {
+  //   if (counter > 0) {
+  //     setCounter((count) => count - 1);
+  //   }
+  // };
   //reset counter
   const addCart = () => {
-    console.log(props.name, " has been added to cart ", counter, " times");
+    console.log(props.name, " has been added to cart");
   };
   return (
     <div className="contact-card">
@@ -25,7 +26,7 @@ export default function Contact({ props }) {
         <p>{props.discreption}</p>
       </div>
       <div className="info-group">
-        <img src={cat3} />
+        <img src={dollarSign} alt="" />
         <p>{props.price} SAR </p>
       </div>
       <div className="flex">
@@ -48,7 +49,4 @@ export default function Contact({ props }) {
       {/* <h1 style={{display: props.num ? 'block' : 'none'}}>{1 + props.num}</h1> */}
     </div>
   );
-}
-{
-  /* <img src={cat2} /> */
 }
