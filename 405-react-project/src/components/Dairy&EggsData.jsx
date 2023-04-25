@@ -11,7 +11,7 @@ export default [
     img: "https://cdnprod.mafretailproxy.com/sys-master-root/h78/h48/16847346925598/560836_main.jpg_200Wx200H",
     name: "Almarai Full Fat Fresh Milk 2.85L",
     discreption: "Origin - Kingdom of Saudi Arabia",
-    price: 14.50,
+    price: 14.5,
   },
   {
     id: 3,
@@ -41,5 +41,5 @@ export default [
     name: "Almarai Uht Cooking Cream 500ml",
     discreption: "Origin - Kingdom of Saudi Arabia",
     price: 16.95,
-  }
+  },
 ];

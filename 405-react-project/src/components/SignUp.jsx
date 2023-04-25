@@ -46,11 +46,12 @@ export default function SignUp() {
         requestOptions
       );
       const result = await response.json();
+      console.log(result);
 
       if (result.success) {
         navigate("/login");
       } else {
-        alert("Account Already Exists");
+        alert(result.message);
       }
     } else {
       console.log("Passwords do not match");
@@ -134,12 +135,13 @@ export default function SignUp() {
           Phone
         </label>
         <input
-          type="number"
+          type="tel"
           placeholder="phone"
           className="form--input"
           name="phone"
           onChange={handleChange}
           value={formData.phone}
+          pattern="[0-9]{4}[0-9]{3}[0-9]{3}"
           required
         />
         <div className="form--marketing">

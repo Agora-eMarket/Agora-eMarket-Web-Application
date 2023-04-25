@@ -1,32 +1,55 @@
 import React from "react";
-import cat3 from "./dollar-sign.png";
+import dollarSign from "./dollar-sign.png";
 export default function Contact({ props }) {
-  const [counter, setCounter] = React.useState(0);
-
-  //increase counter
-  const increase = () => {
-    setCounter((count) => count + 1);
-  };
-  //decrease counter
-  const decrease = () => {
-    if (counter > 0) {
-      setCounter((count) => count - 1);
+  const [quantity, setQuantity] = React.useState(1);
+  // const [cartItems, setCartItems] = React.useState([]);
+  function handleQuantityChange(event) {
+    const newQuantity = Number(event.target.value);
+    if (newQuantity < 1) {
+      setQuantity(1);
+      return;
     }
-  };
-  //reset counter
+    setQuantity(newQuantity);
+  }
+
   const addCart = () => {
-    console.log(props.name, " has been added to cart ", counter, " times");
+    const newItem = {
+      img: props.img,
+      name: props.name,
+      price: props.price * quantity,
+      quantity: quantity,
+    };
+
+    const storedItems = localStorage.getItem("items");
+
+    let parsedItems = [];
+
+    if (storedItems && storedItems !== "") {
+      parsedItems = JSON.parse(storedItems);
+    }
+
+    const existingItem = parsedItems.find((item) => item.name === newItem.name);
+
+    if (existingItem) {
+      existingItem.quantity += newItem.quantity;
+      existingItem.price += newItem.price;
+    } else {
+      parsedItems.push(newItem);
+    }
+
+    localStorage.setItem("items", JSON.stringify(parsedItems));
+
+    // setCartItems(parsedItems);
   };
   return (
     <div className="contact-card">
       <img src={props.img} alt="" />
       <h3>{props.name}</h3>
       <div className="info-group" id="inf">
-        <p>{props.discreption}</p>
+        <p>{props.description}</p>
       </div>
       <div className="info-group">
-        <img src={cat3} />
-        <p>{props.price} SAR </p>
+        <p id="priceTag">SAR {props.price}</p>
       </div>
       <div className="flex">
         <button
@@ -36,7 +59,13 @@ export default function Contact({ props }) {
         >
           Add to cart
         </button>
-        <input type="number" className="quantity" min="1"></input>
+        <input
+          type="number"
+          className="quantity"
+          min="1"
+          value={quantity}
+          onChange={handleQuantityChange}
+        ></input>
         {/* <button className="contact-card-btn" onClick={decrease}>
           -
         </button>
@@ -48,7 +77,4 @@ export default function Contact({ props }) {
       {/* <h1 style={{display: props.num ? 'block' : 'none'}}>{1 + props.num}</h1> */}
     </div>
   );
-}
-{
-  /* <img src={cat2} /> */
 }

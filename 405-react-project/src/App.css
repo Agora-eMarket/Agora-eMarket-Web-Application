@@ -230,7 +230,7 @@ section {
   align-self: center;
   /* border-radius: 5px; */
   object-fit: cover;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #222;
 }
 .contact-card-btn {
   width: 50px;
@@ -246,7 +246,7 @@ section {
 }
 
 .add-btn {
-  transition: all 0.5s ease 0s;
+  /* transition: all 0.5s ease 0s; */
   background-color: #0065f3;
   margin-top: 0.5rem;
   width: 60%;
@@ -261,14 +261,12 @@ section {
 }
 
 .add-btn:hover {
-  /* margin-top: 1.5rem; */
-  transition: all 0.5s ease 0s;
   background-color: rgb(0, 90, 255);
-  /* padding: 1rem; */
-  font-size: 1.5rem;
-  /* background: linear-gradient(45deg, rgba(230, 95, 85,1) 30%, rgba(255,59,0,1) 70%); */
-  /* color: #ddd;
- */
+  color: #ddd; 
+} 
+
+.add-btn:active {
+  background-color: rgb(200, 100, 0)
 }
 
 .quantity {
@@ -280,8 +278,10 @@ section {
 }
 
 .contact-card > h3 {
-  font-weight: 700;
-  font-size: 18px;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #222;
 }
 
 .info-group {
@@ -303,7 +303,9 @@ section {
   cursor: pointer;
 }
 #inf {
-  padding-left: 15px;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
 }
 .card-list {
   display: flex;
@@ -416,7 +418,7 @@ section {
 }
 
 .contactUs-btn:active {
-  background-color: #ccc;
+  background-color: rgb(200, 100, 0)
 }
 
 textarea {
@@ -465,4 +467,8 @@ textarea {
 
 .required {
   color: rgb(205, 40, 40);
+}
+
+#priceTag {
+  font-size: 1.5rem;
 }

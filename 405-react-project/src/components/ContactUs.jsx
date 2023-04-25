@@ -36,10 +36,11 @@ function ContactUs() {
             Phone number
           </label>
           <input
-            type="text"
+            type="tel"
             className="contact--input"
             name="contact-number"
             id="contact-number"
+            pattern="[0-9]{4}[0-9]{3}[0-9]{3}"
             placeholder="0505111567"
           />
 
