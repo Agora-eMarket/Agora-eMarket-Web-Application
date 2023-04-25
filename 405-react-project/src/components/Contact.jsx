@@ -1,6 +1,7 @@
 import React from "react";
 import dollarSign from "./dollar-sign.png";
 export default function Contact({ props }) {
+  alert("Contact card");
   // const [counter, setCounter] = React.useState(0);
 
   // //increase counter
