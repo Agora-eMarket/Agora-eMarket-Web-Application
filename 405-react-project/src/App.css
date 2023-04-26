@@ -271,6 +271,30 @@ section {
   background-color: rgb(200, 100, 0)
 }
 
+.checkout-btn {
+  /* transition: all 0.5s ease 0s; */
+  background-color: #0065f3;
+  /* margin-top: 10rem; */
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  /* margin-right: 3rem; */
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  color: #ddd;
+}
+
+.checkout-btn:hover {
+  background-color: rgb(0, 90, 255);
+  color: #ddd;
+}
+
+.checkout-btn:active {
+  background-color: rgb(200, 100, 0)
+}
+
 .quantity {
   width: 30%;
   height: 60%;
@@ -552,18 +576,20 @@ textarea {
   float: right;
  margin-left: auto;
  margin-right: 2rem;
- font-size: 16px;
+ font-size: 1.4rem;
 }
 .cart-stats h3{
   width: fit-content;
   height: fit-content;
+  margin-bottom: 0.5rem;
 }
 .cart-stats button{
   cursor: pointer;
   margin: 0;
 }
 .cart-inside hr{
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  margin-bottom: 1rem;
 }
 .nav-cart{
   font-size: 1.5rem;
