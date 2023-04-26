@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import CartLayout from "./CartLayout";
 
 export default function Cart() {
+    //replace from here until you see ---------- with cart from local storage
     const [dairyEggsData, setDairyEggsData] = React.useState([]);
     const [fruitsVegetablesData, setFruitsVegetablesData] = React.useState([]);
 
@@ -40,6 +41,7 @@ export default function Cart() {
     const fruitsVegetables = fruitsVegetablesData.map((item) => {
         return <CartLayout key={item.id} item={item} />;
     });
+    //----------------------------------- stop here --------------------------------------
     var price=0;
     const cost = dairyEggsData.map((item) => {
         return(price+= parseFloat( item.price))
