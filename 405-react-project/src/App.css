@@ -93,6 +93,7 @@ footer {
   width: 5rem;
   margin-right: 2rem;
 }
+
 .logo-img-1 {
   color: #087500;
   font-size: 6rem;
@@ -173,8 +174,7 @@ div nav ul li a:hover {
 }
 
 .hero {
-  background: url("https://images.pexels.com/photos/2733918/pexels-photo-2733918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-    no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/2733918/pexels-photo-2733918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
   height: 100vh;
   position: relative;
   color: #fff;
@@ -201,6 +201,7 @@ div nav ul li a:hover {
 .footer p {
   padding: 1rem;
 }
+
 section {
   padding: 20px;
 }
@@ -224,7 +225,7 @@ section {
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.19);
 }
 
-.contact-card > img {
+.contact-card>img {
   width: 100%;
   height: auto;
   align-self: center;
@@ -232,6 +233,7 @@ section {
   object-fit: cover;
   border-bottom: 2px solid #222;
 }
+
 .contact-card-btn {
   width: 50px;
   background-color: transparent;
@@ -262,8 +264,8 @@ section {
 
 .add-btn:hover {
   background-color: rgb(0, 90, 255);
-  color: #ddd; 
-} 
+  color: #ddd;
+}
 
 .add-btn:active {
   background-color: rgb(200, 100, 0)
@@ -277,7 +279,7 @@ section {
   text-align: center;
 }
 
-.contact-card > h3 {
+.contact-card>h3 {
   margin: 1rem;
   font-weight: bold;
   font-size: 1.8rem;
@@ -289,30 +291,34 @@ section {
   align-items: center;
 }
 
-.info-group > img {
+.info-group>img {
   height: 11px;
   margin-right: 8px;
 }
 
-.info-group > p {
+.info-group>p {
   margin-block: 3px;
   font-size: 12px;
   color: #2b283a;
 }
+
 .contact-card:hover {
   cursor: pointer;
 }
+
 #inf {
   margin-bottom: 1rem;
   display: block;
   text-align: center;
 }
+
 .card-list {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
   overflow-x: auto;
 }
+
 .food-type {
   margin: 20px;
 
@@ -333,6 +339,7 @@ section {
   /* border-bottom: solid 1px #333; */
   margin: 30px 0;
 }
+
 .type {
   color: #0065f3;
 }
@@ -438,23 +445,23 @@ textarea {
 
 .features-container {
   display: flex;
-  justify-content:space-evenly;
-  align-items:center;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   height: 40%;
-    /* background-color: #fff; */
+  /* background-color: #fff; */
   /* margin-top: 5rem; */
 }
 
 .features {
   display: flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 30%;
   height: 90%;
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.19);
-    /* background-color: #ddd; */
+  /* background-color: #ddd; */
   border-radius: 1.5rem;
 }
 
@@ -471,4 +478,113 @@ textarea {
 
 #priceTag {
   font-size: 1.5rem;
+}
+
+.cart-container {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  height: 90vh;
+  /* padding: 1px; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+
+}
+
+.cart-container h1 {
+  color: #0065f3;
+}
+
+.cart-inside {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #0065f3;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  /* box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.19); */
+  width: 30%;
+  min-height: 70rem;
+  min-width: 70rem;
+}
+
+.cart-item {
+  padding: 1.3rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: space-between;
+  margin-bottom: 1rem;
+}
+
+.cart-img {
+  width: 10%;
+  height: auto;
+  /* border-radius: 5px; */
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.cart-item h3 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #222;
+  display: inline-flex;
+  float: left;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  margin-right: auto;
+}
+.cart-item h4{
+  height: 3vh;
+  width: 7vh;
+  color: #0065f3;
+  font-size: 1.8rem;
+  border: 1px solid #222;
+  display: inline-block;
+}
+.cart-item-name{
+  margin-right: auto;
+}
+.cart-stats{
+  float: right;
+ margin-left: auto;
+ margin-right: 2rem;
+ font-size: 16px;
+}
+.cart-stats h3{
+  width: fit-content;
+  height: fit-content;
+}
+.cart-stats button{
+  cursor: pointer;
+  margin: 0;
+}
+.cart-inside hr{
+  border: 1px solid black;
+}
+.nav-cart{
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+
+.diamond-shape {
+  border: 1px solid #0065f3;
+  height: 60px;
+  text-align: center;
+  transform:rotate(45deg);
+	width:60px;
+  cursor: pointer;
+}
+
+.diamond-shape p{
+  color: #333;
+  display: table-cell;
+  height: 60px;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+	width:60px;
 }

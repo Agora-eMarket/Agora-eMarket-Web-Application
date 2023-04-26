@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 import Contact from "./Contact";
-function Menu() {
+export default function Menu() {
   const [dairyEggsData, setDairyEggsData] = React.useState([]);
   const [fruitsVegetablesData, setFruitsVegetablesData] = React.useState([]);
 
@@ -55,5 +55,3 @@ function Menu() {
     </>
   );
 }
-
-export default Menu;

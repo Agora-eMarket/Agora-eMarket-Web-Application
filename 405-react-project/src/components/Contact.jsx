@@ -1,19 +1,6 @@
 import React from "react";
 import dollarSign from "./dollar-sign.png";
 export default function Contact({ props }) {
-  // const [counter, setCounter] = React.useState(0);
-
-  // //increase counter
-  // const increase = () => {
-  //   setCounter((count) => count + 1);
-  // };
-  // //decrease counter
-  // const decrease = () => {
-  //   if (counter > 0) {
-  //     setCounter((count) => count - 1);
-  //   }
-  // };
-  //reset counter
   const addCart = () => {
     console.log(props.name, " has been added to cart");
   };
@@ -31,21 +18,12 @@ export default function Contact({ props }) {
       <div className="flex">
         <button
           className="add-btn"
-          //   style={{ marginRight: "10px" }}
           onClick={addCart}
         >
           Add to cart
         </button>
         <input type="number" className="quantity" min="1"></input>
-        {/* <button className="contact-card-btn" onClick={decrease}>
-          -
-        </button>
-        <p>{counter}</p>
-        <button className="contact-card-btn" onClick={increase}>
-          +
-        </button> */}
       </div>
-      {/* <h1 style={{display: props.num ? 'block' : 'none'}}>{1 + props.num}</h1> */}
     </div>
   );
 }

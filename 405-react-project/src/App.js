@@ -8,7 +8,7 @@ import Menu from "./components/Menu.jsx";
 import Register from "./components/SignUp.jsx";
 import Login from "./components/SignIn.jsx";
 import Payment from "./components/Payment.jsx";
-
+import Cart from "./components/Cart.jsx";
 function App() {
   return (
     <Routes>
@@ -17,6 +17,7 @@ function App() {
       <Route path="/Menu" element={<Menu />} />
       <Route path="/Payment" element={<Payment />} />
       <Route path="/Register" element={<Register />} />
+      <Route path="/Cart" element={<Cart />} />
     </Routes>
   );
 }
