@@ -1,11 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./SignUpStyle.css";
 
 export default function SignIn() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const fromCartPage = queryParams.get("fromCartPage") === "true";
 
-  // initialize isLoggedIn state with localStorage values or default values
   const [isLoggedIn, setIsLoggedIn] = React.useState({
     state: localStorage.getItem("isLoggedIn") === "true" || false,
     email: localStorage.getItem("email") || "",
@@ -55,7 +57,11 @@ export default function SignIn() {
         setIsLoggedIn(userData);
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("email", formData.email);
-        navigate("/menu");
+        if (fromCartPage) {
+          navigate("/Payment");
+        } else {
+          navigate("/menu");
+        }
       } else {
         alert(result.message);
       }

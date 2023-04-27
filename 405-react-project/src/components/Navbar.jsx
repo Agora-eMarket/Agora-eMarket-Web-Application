@@ -19,7 +19,7 @@ function Navbar() {
     localStorage.removeItem("email");
     navigate("/");
   }
-  function handleCart(){
+  function handleCart() {
     navigate("/Cart");
   }
   return (
@@ -50,7 +50,7 @@ function Navbar() {
         </ul>
       </nav>
       <div className="diamond-shape" onClick={handleCart}>
-      <p className="nav-cart">Cart</p>
+        <p className="nav-cart">Cart</p>
       </div>
       {isLoggedIn.state ? (
         <a className="btn" href="/" onClick={handleLogout}>

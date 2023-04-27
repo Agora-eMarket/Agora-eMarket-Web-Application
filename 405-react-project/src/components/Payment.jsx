@@ -1,10 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Payment() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState({
-    state: localStorage.getItem("isLoggedIn") === "true" || false,
-    email: localStorage.getItem("email") || "",
-  });
+  const navigate = useNavigate();
 
   const [formData, setFormData] = React.useState({
     cardName: "",
@@ -15,6 +13,8 @@ function Payment() {
     year: "",
   });
 
+  const storedItems = JSON.parse(localStorage.getItem("items")) || [];
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true" || false;
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => ({
@@ -23,28 +23,17 @@ function Payment() {
     }));
   }
 
-  function handleLogout() {
-    setIsLoggedIn({
-      state: false,
-      email: "",
-    });
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("email");
-  }
-
   return (
     <div className="form-container">
-      {isLoggedIn.state ? (
+      {!isLoggedIn ? (
+        navigate("/Login")
+      ) : storedItems.length === 0 ? (
         <div>
-          <p id="loggedInMessage">
-            You are logged in as{" "}
-            <span id="loggedInEmail">{isLoggedIn.email}</span>
+          <p className=".aboutUs-p">
+            Your cart is empty. Please add some items before proceeding.
           </p>
-          <a className="loggedBtn" href="/">
-            Home
-          </a>
-          <a className="loggedBtn" href="/" onClick={handleLogout}>
-            Log out
+          <a className="checkout-btn" href="/Menu">
+            Go to Menu
           </a>
         </div>
       ) : (
@@ -139,13 +128,15 @@ function Payment() {
             value={formData.address}
             required
           />
-          <p className="form--label">Payement Type</p>
+          <p className="form--label">Payment Type</p>
           <select id="paymentOptions">
             <option value="Visa">Visa</option>
             <option value="MasterCard">Master Card</option>
-            <option value="Mada">Mada</option>
+            <option value="AmericanExpress">American Express</option>
           </select>
-          <button className="form--submit">Pay</button>
+          <button className="form--submit" type="button">
+            Pay now
+          </button>
         </form>
       )}
     </div>
