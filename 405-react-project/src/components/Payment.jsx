@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import useCartCost from "./hooks/useCartCost.jsx";
 
 function Payment() {
   const navigate = useNavigate();
-
+  const { price, vat, totalPrice, cartItems } = useCartCost();
   const [formData, setFormData] = React.useState({
     cardName: "",
     cardNumber: "",
@@ -13,7 +14,6 @@ function Payment() {
     year: "",
   });
 
-  const storedItems = JSON.parse(localStorage.getItem("items")) || [];
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true" || false;
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
@@ -27,7 +27,7 @@ function Payment() {
     <div className="form-container">
       {!isLoggedIn ? (
         navigate("/Login")
-      ) : storedItems.length === 0 ? (
+      ) : cartItems.length === 0 ? (
         <div>
           <p className=".aboutUs-p">
             Your cart is empty. Please add some items before proceeding.
@@ -128,14 +128,21 @@ function Payment() {
             value={formData.address}
             required
           />
-          <p className="form--label">Payment Type</p>
-          <select id="paymentOptions">
-            <option value="Visa">Visa</option>
-            <option value="MasterCard">Master Card</option>
-            <option value="AmericanExpress">American Express</option>
-          </select>
+          <p className="form--label margTop">Payment Type</p>
+          <div className="form--type">
+            <select id="paymentOptions">
+              <option value="Visa">Visa</option>
+              <option value="MasterCard">Master Card</option>
+              <option value="AmericanExpress">American Express</option>
+            </select>
+            <div className="cart-stats">
+              <h3>Cost: {price.toFixed(2)}</h3>
+              <h3>Vat 15%: {vat}</h3>
+              <h3>Total Cost: {totalPrice.toFixed(2)}</h3>
+            </div>
+          </div>
           <button className="form--submit" type="button">
-            Pay now
+            Confirm Order
           </button>
         </form>
       )}

@@ -1,32 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import useCartCost from "./hooks/useCartCost.jsx";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import CartLayout from "./CartLayout";
 
 export default function Cart() {
   const navigate = useNavigate();
-  const [cartItems, setCartItems] = React.useState(
-    JSON.parse(localStorage.getItem("items")) || []
-  );
-  const [price, setPrice] = React.useState(0);
-  const [vat, setVat] = React.useState(0);
-  const [totalPrice, setTotalPrice] = React.useState(0);
-  // Calculate the cost of the items in the cart
-  React.useEffect(() => {
-    // Calculate the cost of the items in the cart
-    var newPrice = 0;
-    cartItems.forEach((item) => {
-      newPrice += parseFloat(item.price);
-    });
-    setPrice(newPrice);
-
-    // Calculate the VAT and total price
-    var newVat = (newPrice * 0.15).toFixed(2);
-    setVat(newVat);
-    var newTotalPrice = parseFloat(newPrice) + parseFloat(newVat);
-    setTotalPrice(newTotalPrice);
-  }, [cartItems]);
+  const {
+    price,
+    vat,
+    totalPrice,
+    cartItems,
+    setPrice,
+    setVat,
+    setTotalPrice,
+    setCartItems,
+  } = useCartCost();
 
   function handleCheckoutButtonClick() {
     if (localStorage.getItem("isLoggedIn")) {

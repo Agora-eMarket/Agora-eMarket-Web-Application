@@ -51,6 +51,7 @@ body {
     align-items: space-between;
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.19);
     width: 30%;
+    flex-wrap: wrap;
 }
 
 a {
@@ -91,12 +92,14 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .payment-label-flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #cvvLabel {
@@ -149,6 +152,10 @@ a {
     background-color: rgb(0, 90, 255);
 }
 
+.form--submit:active {
+    background-color: rgb(200, 100, 0)
+}
+
 .form--marketing {
     display: flex;
     margin-bottom: 20px;
@@ -199,4 +206,10 @@ p {
     outline: none;
     border-color: #ff9832;
     box-shadow: 0px 0px 4px 4px rgba(255,152,50,0.4);   
+}
+
+.form--type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
