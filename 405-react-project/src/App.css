@@ -36,8 +36,9 @@ header {
 
 nav {
   grid-area: nav;
-  flex-grow: 1;
-  text-align: center;
+  /* flex-grow: 1; */
+  margin-left: 19rem;
+  width: 35%;
 }
 
 footer {
@@ -131,6 +132,7 @@ div nav ul li a {
   color: #333;
 }
 
+
 div nav ul li a:hover {
   transition: all 0.3s ease 0s;
   font-size: 1.8rem;
@@ -168,8 +170,8 @@ div nav ul li a:hover {
 .btn:hover {
   transition: all 0.5s ease 0s;
   background-color: rgb(0, 90, 255);
-  padding: 1rem;
-  font-size: 2rem;
+  /* padding: 1rem; */
+  font-size: 1.9rem;
   /* background: linear-gradient(45deg, rgba(230, 95, 85,1) 30%, rgba(255,59,0,1) 70%); */
   /* color: #ddd;
  */
@@ -511,7 +513,7 @@ section {
 }
 
 .contactUs-btn:active {
-  background-color: rgb(200, 100, 0)
+  background-color: #c86400;
 }
 
 textarea {
@@ -680,24 +682,22 @@ textarea {
 .nav-cart{
   font-size: 1.5rem;
   font-weight: bold;
-  
 }
 
-.diamond-shape {
-  border: 1px solid #0065f3;
-  height: 35px;
-  transform:rotate(45deg);
-	width:35px;
+.diamond-shape a{
+  /* color: #c86400; */
+  /* color: #0065f3; */
+  color: #9200f3;
+  font-size: 3.5rem;
   cursor: pointer;
-  margin-right: 20rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
 }
 
-.diamond-shape p{
-  color: #333;
-  display: table-cell;
-  height: 35px;
-  transform: rotate(-45deg);
-  vertical-align: middle;
-	width:35px;
-  font-size: 1.3rem;
+.diamond-shape a:hover {
+  background-color: #eee;
+}
+
+.diamond-shape a:active {
+  background-color: #ddd;
 }

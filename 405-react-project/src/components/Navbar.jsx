@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BsCart4 } from "react-icons/bs";
 // import { faCartShopping } from "@fortawesome/free-regular-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 //is this working
@@ -18,9 +19,6 @@ function Navbar() {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("email");
     navigate("/");
-  }
-  function handleCart() {
-    navigate("/Cart");
   }
   return (
     <div className="navbar">
@@ -45,12 +43,16 @@ function Navbar() {
             <a href="/#about-us">About us</a>
           </li>
           <li>
-            <a href="/#contact-us">Contact us</a>
+            <a id="contact-us-nav" href="/#contact-us">
+              Contact us
+            </a>
           </li>
         </ul>
       </nav>
-      <div className="diamond-shape" onClick={handleCart}>
-        <p className="nav-cart">Cart</p>
+      <div className="diamond-shape">
+        <a href="/Cart" className="nav-cart">
+          <BsCart4 />
+        </a>
       </div>
       {isLoggedIn.state ? (
         <a className="btn" href="/" onClick={handleLogout}>
