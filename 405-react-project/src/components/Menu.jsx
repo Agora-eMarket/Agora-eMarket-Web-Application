@@ -1,37 +1,10 @@
 import React from "react";
+import useMenuItems from "./hooks/useMenuItems.jsx";
 import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 import Contact from "./Contact";
 export default function Menu() {
-  const [dairyEggsData, setDairyEggsData] = React.useState([]);
-  const [fruitsVegetablesData, setFruitsVegetablesData] = React.useState([]);
-
-  React.useEffect(() => {
-    const fetchMenu = async () => {
-      var requestOptions = {
-        method: "GET",
-        redirect: "follow",
-      };
-      try {
-        const response = await fetch(
-          "http://localhost/menu.php?category=all",
-          requestOptions
-        );
-        const result = await response.json();
-        const dairyEggs = result.filter(
-          (item) => item.category === "Dairy" || item.category === "Eggs"
-        );
-        setDairyEggsData(dairyEggs);
-        const fruitsVegetables = result.filter(
-          (item) => item.category === "Fruits" || item.category === "Vegetables"
-        );
-        setFruitsVegetablesData(fruitsVegetables);
-      } catch (e) {
-        console.error(e.message);
-      }
-    };
-    fetchMenu();
-  }, []);
+  const { dairyEggsData, fruitsVegetablesData } = useMenuItems();
 
   const dairyEggs = dairyEggsData.map((item) => {
     return <Contact key={item.id} props={item} />;
