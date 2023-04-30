@@ -688,14 +688,14 @@ textarea {
   /* color: #c86400; */
   /* color: #0065f3; */
   color: #9200f3;
-  font-size: 3.5rem;
+  font-size: 3rem;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
+  padding: 0.8rem 1rem 0.5rem 1rem;
+  border-radius: 50%;
 }
 
 .diamond-shape a:hover {
-  background-color: #eee;
+  background-color: #f0f0f0;
 }
 
 .diamond-shape a:active {
