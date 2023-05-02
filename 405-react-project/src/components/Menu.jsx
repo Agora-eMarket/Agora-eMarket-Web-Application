@@ -3,6 +3,7 @@ import useMenuItems from "./hooks/useMenuItems.jsx";
 import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 import Contact from "./Contact";
+
 export default function Menu() {
   const { dairyEggsData, fruitsVegetablesData } = useMenuItems();
 
