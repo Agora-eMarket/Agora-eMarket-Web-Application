@@ -1,6 +1,8 @@
 import React from "react";
+import { AiFillCheckCircle } from "react-icons/ai";
 export default function Contact({ props }) {
   const [quantity, setQuantity] = React.useState(1);
+  const [isFlipped, setIsFlipped] = React.useState(false);
 
   function handleQuantityChange(event) {
     const newQuantity = Number(event.target.value);
@@ -13,6 +15,13 @@ export default function Contact({ props }) {
   }
 
   const addCart = () => {
+    setIsFlipped(true); // flip the card
+
+    setTimeout(() => {
+      // show a message after 1 second
+      setIsFlipped(false); // flip the card back after showing the message
+    }, 1250);
+
     const newItem = {
       img: props.img,
       name: props.name,
@@ -46,26 +55,39 @@ export default function Contact({ props }) {
     localStorage.setItem("items", JSON.stringify(parsedItems));
   };
   return (
-    <div className="contact-card">
-      <img src={props.img} alt="" />
-      <h3>{props.name}</h3>
-      <div className="info-group" id="inf">
-        <p>{props.description}</p>
-      </div>
-      <div className="info-group">
-        <p id="priceTag">SAR {props.price}</p>
-      </div>
-      <div className="flex">
-        <button className="add-btn" onClick={addCart}>
-          Add to cart
-        </button>
-        <input
-          type="number"
-          className="quantity quantity-input"
-          value={quantity}
-          onChange={handleQuantityChange}
-        ></input>
-      </div>
+    <div
+      className={
+        !isFlipped ? "contact-card" : " contact-card contact-card-flip"
+      }
+    >
+      {isFlipped ? (
+        <div className="contact-card-add-item">
+          <p>Item added to cart successfully</p>
+          <AiFillCheckCircle />
+        </div>
+      ) : (
+        <>
+          <img src={props.img} alt="" />
+          <h3>{props.name}</h3>
+          <div className="info-group" id="inf">
+            <p>{props.description}</p>
+          </div>
+          <div className="info-group">
+            <p id="priceTag">SAR {props.price}</p>
+          </div>
+          <div className="flex">
+            <button className="add-btn" onClick={addCart}>
+              Add to cart
+            </button>
+            <input
+              type="number"
+              className="quantity quantity-input"
+              value={quantity}
+              onChange={handleQuantityChange}
+            ></input>
+          </div>
+        </>
+      )}
     </div>
   );
 }

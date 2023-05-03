@@ -73,7 +73,7 @@ export default function SignUp() {
           </a>
         </h1>
         <label htmlFor="fname" className="form--label">
-          First Name
+          First Name<span className="required"> *</span>
         </label>
         <input
           type="text"
@@ -96,7 +96,7 @@ export default function SignUp() {
           value={formData.lname}
         />
         <label htmlFor="fname" className="form--label">
-          Email
+          Email<span className="required"> *</span>
         </label>
         <input
           type="email"
@@ -108,7 +108,7 @@ export default function SignUp() {
           required
         />
         <label htmlFor="fname" className="form--label">
-          Password
+          Password<span className="required"> *</span>
         </label>
         <input
           type="password"
@@ -120,7 +120,7 @@ export default function SignUp() {
           required
         />
         <label htmlFor="fname" className="form--label">
-          Confirm Password
+          Confirm Password<span className="required"> *</span>
         </label>
         <input
           type="password"
@@ -132,7 +132,7 @@ export default function SignUp() {
           required
         />
         <label htmlFor="fname" className="form--label">
-          Phone
+          Phone<span className="required"> *</span>
         </label>
         <input
           type="tel"

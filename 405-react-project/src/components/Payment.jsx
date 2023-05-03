@@ -38,7 +38,7 @@ function Payment() {
         </div>
       ) : (
         <form className="form">
-          <h1>
+          <h1 className="form-payment">
             <a href="/">
               <span className="form-title">Payment</span> Information
             </a>

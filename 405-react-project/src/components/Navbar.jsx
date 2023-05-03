@@ -40,7 +40,7 @@ function Navbar() {
             <a href="/Menu">Menu</a>
           </li>
           <li>
-            <a href="/#about-us">About us</a>
+            <a href="/#about-us">About Us</a>
           </li>
           <li>
             <a id="contact-us-nav" href="/#contact-us">
