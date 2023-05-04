@@ -231,7 +231,6 @@ section {
 }
 
 .contact-card-flip {
-  transition: transform 0.5s ease;
   transform: rotateY(180deg);
   background-color: #bbbbbbbb;
   display: flex;
