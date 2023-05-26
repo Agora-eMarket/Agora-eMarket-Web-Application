@@ -128,13 +128,15 @@ function Payment() {
             value={formData.address}
             required
           />
-          <p className="form--label margTop">Payment Type</p>
           <div className="form--type">
-            <select id="paymentOptions">
-              <option value="Visa">Visa</option>
-              <option value="MasterCard">Master Card</option>
-              <option value="AmericanExpress">American Express</option>
-            </select>
+            <div id="payment-type">
+              <p className="form--label margTop">Payment Type</p>
+              <select id="paymentOptions">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">Master Card</option>
+                <option value="AmericanExpress">American Express</option>
+              </select>
+            </div>
             <div className="cart-stats">
               <h3>Cost: {price.toFixed(2)}</h3>
               <h3>Vat 15%: {vat}</h3>

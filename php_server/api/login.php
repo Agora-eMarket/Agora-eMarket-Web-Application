@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $json = file_get_contents('php://input');
     $data = json_decode($json);
 
-    $query = $conn->prepare("SELECT email, hash FROM user where email=?");
+    $query = $conn->prepare("SELECT email, hash, fname FROM user where email=?");
 
     try {
         $query->execute([$data->email]);
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // echo $fetch[1];
             // echo $hashed_pass;
             if (password_verify($data->password, $fetch[1])) {
-                echo json_encode(['success' => true, 'message' => "Login Successful"]);
+                echo json_encode(['success' => true, 'message' => "Login Successful", 'name' => $fetch[2]]);
             } else {
                 echo json_encode(['success' => false, 'message' => "Invalid Credentials"]);
             }

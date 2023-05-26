@@ -595,9 +595,8 @@ textarea {
 .cart-container {
   margin-top: 4rem;
   /* margin-bottom: 6rem; */
-  height: 80vh;
+  height: 78vh;
   width: 100%;
-  /* padding: 1px; */
   /* box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.19); */
   display: flex;
   flex-direction: column;
@@ -779,4 +778,116 @@ textarea {
 
 #profile:hover{
   background-color: #eee;
+}
+
+#page-container{
+  background: url('../public/5107183_2548748.jpg') center/cover;
+  display: flex;
+  justify-content:center;
+}
+
+#orders-container {
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.19);
+  border-radius: 10px;
+  min-height: 81vh;
+  min-width: 60%;
+  margin: 1rem 0;
+  overflow-y: scroll
+}
+
+#orders-container > h1 {
+  padding: 3rem 0;
+  border-bottom: 1px solid #bbb;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  min-height: 10%;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+}
+
+.order:last-child {
+  margin-bottom: 2rem;
+}
+
+.order > p {
+  font-size: 1.8rem;
+  margin: 0 3.5rem;
+}
+
+.order > p:nth-child(2){
+  margin-left: 8rem;
+}
+
+.order:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.order-details-hide {
+  display: none;
+}
+
+.order-details-show {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin: 0 5rem;
+  padding: 1rem;
+}
+
+.order-item {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.order-item > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.order-item img {
+  width: 25%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-left: 1rem;
+}
+#item-nameQnt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+}
+#item-name {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+#item-quantity {
+  font-size: 1.3rem;
+  margin: 0;
+}
+#item-price{
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;               
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #818181;    
+  border-radius: 20px;
 }

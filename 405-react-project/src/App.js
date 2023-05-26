@@ -9,6 +9,7 @@ import Register from "./components/SignUp.jsx";
 import Login from "./components/SignIn.jsx";
 import Payment from "./components/Payment.jsx";
 import Cart from "./components/Cart.jsx";
+import Orders from "./components/Orders.jsx";
 function App() {
   return (
     <Routes>
@@ -18,6 +19,7 @@ function App() {
       <Route path="/Payment" element={<Payment />} />
       <Route path="/Register" element={<Register />} />
       <Route path="/Cart" element={<Cart />} />
+      <Route path="/Orders" element={<Orders />} />
     </Routes>
   );
 }
