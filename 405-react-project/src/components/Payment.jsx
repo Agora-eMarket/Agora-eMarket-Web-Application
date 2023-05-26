@@ -23,7 +23,6 @@ function Payment() {
     }));
   }
   async function handleOrderBTN(){
-    console.log('Hello function')
     var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
@@ -40,9 +39,7 @@ function Payment() {
         body: raw,
         redirect: "follow",
       };
-      console.log(cartItems)
-      console.log(totalPrice)
-
+      
       const response = await fetch(
         "http://localhost/postOrder.php",
         requestOptions
