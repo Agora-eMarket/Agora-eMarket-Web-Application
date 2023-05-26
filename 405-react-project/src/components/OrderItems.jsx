@@ -22,7 +22,7 @@ function OrderItems({ data, selectedOrderId, handleToggle }) {
                   <p id="item-quantity">Qnt: {item.quantity}</p>
                 </div>
               </div>
-              <p id="item-price">SAR {item.price}</p>
+              <p id="item-price">SAR {item.price.toFixed(2)}</p>
             </div>
           ))}
       </div>

@@ -22,37 +22,79 @@ function Payment() {
       [name]: type === "checkbox" ? checked : value,
     }));
   }
-  async function handleOrderBTN(){
+  async function handleOrderBTN() {
+    if (
+      formData.cardName.trim() === "" ||
+      formData.cardNumber.trim() === "" ||
+      formData.address.trim() === "" ||
+      formData.cvv.trim() === "" ||
+      formData.month.trim() === "" ||
+      formData.year.trim() === ""
+    ) {
+      alert("Please fill out all required fields.");
+      return;
+    }
+
+    const nameRegex = /^[a-zA-Z ]*$/;
+    if (!nameRegex.test(formData.cardName)) {
+      alert("Please enter a valid name.");
+      return;
+    }
+
+    const cardNumberRegex = /^[0-9]{16}$/;
+    if (!cardNumberRegex.test(formData.cardNumber)) {
+      alert("Please enter a valid card number.");
+      return;
+    }
+
+    const cvvRegex = /^[0-9]{3}$/;
+    if (!cvvRegex.test(formData.cvv)) {
+      alert("Please enter a valid CVV.");
+      return;
+    }
+
+    const monthRegex = /^(0?[1-9]|1[012])$/;
+    if (!monthRegex.test(formData.month)) {
+      alert("Please enter a valid month (MM).");
+      return;
+    }
+
+    const yearRegex = /^[0-9]{4}$/;
+    if (!yearRegex.test(formData.year)) {
+      alert("Please enter a valid year (YY).");
+      return;
+    }
+
     var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Content-Type", "application/json");
 
-      var raw = JSON.stringify({
-        email: localStorage.getItem("email"),
-        items: cartItems,
-        totalPrice: totalPrice,
-        status: 'In progress'
-      });
+    var raw = JSON.stringify({
+      email: localStorage.getItem("email"),
+      items: cartItems,
+      totalPrice: totalPrice,
+      status: "Delivered",
+    });
 
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow",
-      };
-      
-      const response = await fetch(
-        "http://localhost/postOrder.php",
-        requestOptions
-      );
-      const result = await response.json();
-      console.log(result);
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
 
-      if (result.success) {
-        localStorage.removeItem('items');
-        navigate("/Cart");
-      } else {
-        alert(result.message);
-      }
+    const response = await fetch(
+      "http://localhost:9090/api/postOrder.php",
+      requestOptions
+    );
+    const result = await response.json();
+    console.log(result);
+
+    if (result.success) {
+      localStorage.removeItem("items");
+      navigate("/");
+    } else {
+      alert(result.message);
+    }
   }
 
   return (
@@ -175,7 +217,11 @@ function Payment() {
               <h3>Total Cost: {totalPrice.toFixed(2)}</h3>
             </div>
           </div>
-          <button className="form--submit" type="button" onClick={handleOrderBTN}>
+          <button
+            className="form--submit"
+            type="button"
+            onClick={handleOrderBTN}
+          >
             Confirm Order
           </button>
         </form>

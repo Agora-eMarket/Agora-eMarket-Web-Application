@@ -11,7 +11,7 @@ function useMenuItems() {
       };
       try {
         const response = await fetch(
-          "http://localhost/menu.php?category=all",
+          "http://localhost:9090/api/menu.php?category=all",
           requestOptions
         );
         const result = await response.json();

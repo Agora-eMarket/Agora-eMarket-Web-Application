@@ -2,10 +2,10 @@
 
 class Database
 {
-    private $host = 'localhost';
+    private $host = 'db';
     private $db_name = 'albaik';
     private $username = 'root';
-    private $password = '';
+    private $password = 'example';
     private $conn;
 
     public function connect()

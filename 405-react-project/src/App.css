@@ -115,9 +115,9 @@ footer {
   margin: 4rem 0 2rem 0;
 }
 
-hr {
-  width: 100%;
-}
+/* hr {
+  width: 80%;
+} */
 
 div nav ul li {
   display: inline-block;
@@ -790,7 +790,7 @@ textarea {
   background-color: #fff;
   box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.19);
   border-radius: 10px;
-  min-height: 81vh;
+  height: calc(100vh - 15.5rem);
   min-width: 60%;
   margin: 1rem 0;
   overflow-y: scroll
@@ -856,7 +856,7 @@ textarea {
   align-items: center;
 }
 .order-item img {
-  width: 25%;
+  width: 22%;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
