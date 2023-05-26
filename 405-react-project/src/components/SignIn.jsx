@@ -57,6 +57,7 @@ export default function SignIn() {
         setIsLoggedIn(userData);
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("email", formData.email);
+        localStorage.setItem("name", result.name);
         if (fromCartPage) {
           navigate("/Payment");
         } else {
@@ -77,6 +78,7 @@ export default function SignIn() {
     });
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("email");
+    localStorage.removeItem("name");
   }
 
   return (
