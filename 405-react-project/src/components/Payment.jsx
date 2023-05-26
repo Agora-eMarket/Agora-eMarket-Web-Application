@@ -83,7 +83,7 @@ function Payment() {
     };
 
     const response = await fetch(
-      "http://localhost:9090/api/postOrder.php",
+      "http://localhost/postOrder.php",
       requestOptions
     );
     const result = await response.json();

@@ -42,7 +42,7 @@ export default function SignUp() {
         redirect: "follow",
       };
       const response = await fetch(
-        "http://localhost:9090/api/register.php",
+        "http://localhost/register.php",
         requestOptions
       );
       const result = await response.json();

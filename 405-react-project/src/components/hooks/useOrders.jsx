@@ -20,7 +20,7 @@ function useOrders() {
       };
       try {
         const response = await fetch(
-          `http://localhost:9090/api/getOrders.php?email=${localStorage.getItem(
+          `http://localhost/getOrders.php?email=${localStorage.getItem(
             "email"
           )}`,
           requestOptions

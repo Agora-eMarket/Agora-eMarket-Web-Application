@@ -44,7 +44,7 @@ export default function SignIn() {
     };
     try {
       const response = await fetch(
-        "http://localhost:9090/api/login.php",
+        "http://localhost/login.php",
         requestOptions
       );
       const result = await response.json();
