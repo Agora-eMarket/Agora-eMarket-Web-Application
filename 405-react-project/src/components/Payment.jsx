@@ -22,6 +22,41 @@ function Payment() {
       [name]: type === "checkbox" ? checked : value,
     }));
   }
+  async function handleOrderBTN(){
+    console.log('Hello function')
+    var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      var raw = JSON.stringify({
+        email: localStorage.getItem("email"),
+        items: cartItems,
+        totalPrice: totalPrice,
+        status: 'In progress'
+      });
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+      console.log(cartItems)
+      console.log(totalPrice)
+
+      const response = await fetch(
+        "http://localhost/postOrder.php",
+        requestOptions
+      );
+      const result = await response.json();
+      console.log(result);
+
+      if (result.success) {
+        localStorage.removeItem('items');
+        navigate("/Cart");
+      } else {
+        alert(result.message);
+      }
+  }
 
   return (
     <div className="form-container">
@@ -141,7 +176,7 @@ function Payment() {
               <h3>Total Cost: {totalPrice.toFixed(2)}</h3>
             </div>
           </div>
-          <button className="form--submit" type="button">
+          <button className="form--submit" type="button" onClick={handleOrderBTN}>
             Confirm Order
           </button>
         </form>
